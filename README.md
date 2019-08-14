@@ -14,12 +14,10 @@ ubuntu / 1q2w3e4r
  ```
  sudo apt install -y jq
  ```
- - doc
  
- 5. docker 설치
+## docker 설치
 
-docker & docker-compose 설치
-
+### docker & docker-compose 설치
 ```sh
 curl -fsSL https://get.docker.com/ | sudo sh
 sudo usermod -aG docker $USER
@@ -33,6 +31,25 @@ docker-compose version
 
 # reboot
 sudo reboot
+```
+
+## k3s 설치
+
+```
+curl -sfL https://get.k3s.io | sh -
+sudo chown ubuntu:ubuntu /etc/rancher/k3s/k3s.yaml
+```
+
+
+**확인**
+```
+kubectl get nodes
+```
+
+### kube config
+
+```
+cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
 
 
