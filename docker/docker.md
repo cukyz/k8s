@@ -166,3 +166,26 @@ docker rm xxx
 docker system prune -a
 ```
 
+
+```
+ubuntu@ip-172-26-12-66:~$ docker ps
+CONTAINER ID        IMAGE                                COMMAND                  CREATED             STATUS              PORTS                    NAMES
+313663514e81        subicura/guestbook-frontend:latest   "node --inspect=9229…"   About an hour ago   Up About an hour    0.0.0.0:3000->8000/tcp   strange_bouman
+f20e677ff9e0        subicura/guestbook-backend:latest    "node --inspect=9229…"   About an hour ago   Up About an hour                             backend
+016b1491914f        mongo:4                              "docker-entrypoint.s…"   About an hour ago   Up About an hour    27017/tcp                mongodb
+ubuntu@ip-172-26-12-66:~$ 
+ubuntu@ip-172-26-12-66:~$ 
+ubuntu@ip-172-26-12-66:~$ docker stop 31 f2 01
+31
+f2
+01
+ubuntu@ip-172-26-12-66:~$ 
+ubuntu@ip-172-26-12-66:~$ 
+ubuntu@ip-172-26-12-66:~$ docker rm 31 f2 01
+31
+f2
+01
+ubuntu@ip-172-26-12-66:~$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+```
