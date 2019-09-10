@@ -8,7 +8,7 @@
 
 3. shell 주소
 http://54.180.141.143:4200/
-ubuntu / 1q2w3e4r
+
 
 4. shell 접속 후 jq  설치
  ```
